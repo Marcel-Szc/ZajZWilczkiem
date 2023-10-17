@@ -1,0 +1,391 @@
+body {
+    display: flex;
+    width:100vw;
+    height:100vh;
+    padding: 0px;
+    margin: 0px;
+}
+.main {
+    display: flex;
+    width: 100%;
+    height:100%;
+}
+.container1 {
+    display: flex;
+    flex-direction:column;
+    width: 50%;
+    height: 100%;
+}
+.container2 {
+    display:flex;
+    flex-direction:column;
+    width: 50%;
+    height: 100%;
+}
+.box1{
+    display: flex;
+    border-bottom: 1px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-color:black;
+    border-style:solid;
+    width: 100%;
+    height: 50%;
+}
+.box2{
+    display: flex;
+    width: 100%;
+    height: 50%;
+}
+.box11 {
+    background-color: yellow;
+    width: 50%;
+    height:100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content:end;
+    justify-content: end;
+}
+.box12 {
+    background-color: yellow;
+    width: 50%;
+    height:100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content:end;
+    justify-content: start;
+}
+.box13 {
+    background-color: yellow;
+    width: 50%;
+    height:100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content:start;
+    justify-content:end;
+}
+.box14 {
+    background-color: yellow;
+    width: 50%;
+    height:100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content:start;
+    justify-content: start;
+}
+.box11a {
+    background-color: greenyellow;
+    width: 50%;
+    height:50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content:end;
+    justify-content: end;
+    outline-width:1px;
+    outline-style:solid;
+    outline-color:black;
+}
+.box11b {
+    background-color:red;
+    width: 50%;
+    height:50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content:end;
+    justify-content: end;
+    outline-width:1px;
+    outline-style:solid;
+    outline-color:black;
+}
+.box11c {
+    background-color: yellow;
+    width: 50%;
+    height:50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content:end;
+    justify-content: end;
+    outline-width:1px;
+    outline-style:solid;
+    outline-color:black;
+}
+.box11d {
+    background-color: blue;
+    width: 50%;
+    height:50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content:end;
+    justify-content: end;
+    outline-width:1px;
+    outline-style:solid;
+    outline-color:black;
+}
+.box12 .box11a {
+    background-color: greenyellow;
+    width: 50%;
+    height:50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content:end;
+    justify-content: start; 
+    outline-width:1px;
+    outline-style:solid;
+    outline-color:black;
+}
+.box12 .box11b {
+    background-color:red;
+    width: 50%;
+    height:50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content:end;
+    justify-content: start;
+    outline-width:1px;
+    outline-style:solid;
+    outline-color:black;
+}
+.box12 .box11c {
+    background-color: yellow;
+    width: 50%;
+    height:50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content:end;
+    justify-content: start;
+    outline-width:1px;
+    outline-style:solid;
+    outline-color:black;
+}
+.box12 .box11d {
+    background-color: blue;
+    width: 50%;
+    height:50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content:end;
+    justify-content: start;
+    outline-width:1px;
+    outline-style:solid;
+    outline-color:black;
+}
+.box13 .box11a {
+    background-color: greenyellow;
+    width: 50%;
+    height:50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content:start;
+    justify-content:end;
+    outline-width:1px;
+    outline-style:solid;
+    outline-color:black;
+}
+.box13 .box11b {
+    background-color:red;
+    width: 50%;
+    height:50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content:start;
+    justify-content:end;
+    outline-width:1px;
+    outline-style:solid;
+    outline-color:black;
+}
+.box13 .box11c {
+    background-color: yellow;
+    width: 50%;
+    height:50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content:start;
+    justify-content:end;
+    outline-width:1px;
+    outline-style:solid;
+    outline-color:black;
+}
+.box13 .box11d {
+    background-color: blue;
+    width: 50%;
+    height:50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content:start;
+    justify-content:end;
+    outline-width:1px;
+    outline-style:solid;
+    outline-color:black;
+}
+.box14 .box11a {
+    background-color: greenyellow;
+    width: 50%;
+    height:50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content:start;
+    justify-content: start;
+    outline-width:1px;
+    outline-style:solid;
+    outline-color:black;
+}
+.box14 .box11b {
+    background-color:red;
+    width: 50%;
+    height:50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content:start;
+    justify-content: start;
+    outline-width:1px;
+    outline-style:solid;
+    outline-color:black;
+}
+.box14 .box11c {
+    background-color: yellow;
+    width: 50%;
+    height:50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content:start;
+    justify-content: start;
+    outline-width:1px;
+    outline-style:solid;
+    outline-color:black;
+}
+.box14 .box11d {
+    background-color: blue;
+    width: 50%;
+    height:50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content:start;
+    justify-content: start;
+    outline-width:1px;
+    outline-style:solid;
+    outline-color:black;
+}
+.container2 {
+    background-color: blue;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.pudelko1 {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: end;
+   
+}
+.pudelko11 {
+    background-color:purple;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: end; 
+    outline-width:1px;
+    outline-style:solid;
+    outline-color:black;
+}
+.pudelko11a {
+    background-color:blue;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: end; 
+    outline-width:1px;
+    outline-style:solid;
+    outline-color:black;
+}
+.pudelko11b {
+    background-color: greenyellow;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: end; 
+    outline-width:1px;
+    outline-style:solid;
+    outline-color:black;
+}
+.pudelko11c {
+    background-color:yellow;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: end; 
+    outline-width:1px;
+    outline-style:solid;
+    outline-color:black;
+}
+.pudelko11d {
+    background-color:red;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: end; 
+    outline-width:1px;
+    outline-style:solid;
+    outline-color:black;
+    flex-direction: row;
+}
+.pudelko11d1 {
+    background-color: whitesmoke;
+    width: 25%;
+    height: 50%;
+    outline-width:1px;
+    outline-style:solid;
+    outline-color:black;
+}
+.p {
+    width: 50%;
+    height: 50%;
+}
+.pudelko11d2 {
+    background-color: whitesmoke;
+    width: 25%;
+    height: 50%;
+    outline-width:1px;
+    outline-style:solid;
+    outline-color:black;
+}
+.pudelko2 {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+}
+.pudelko2 .pudelko11 {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+}
+.pudelko2 .pudelko11 .pudelko11a {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+}
+.pudelko2 .pudelko11 .pudelko11a .pudelko11b{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+}
+.pudelko2 .pudelko11 .pudelko11a .pudelko11b .pudelko11c {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+}
+.pudelko2 .pudelko11 .pudelko11a .pudelko11b .pudelko11c .pudelko11d {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+}

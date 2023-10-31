@@ -1,0 +1,126 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+  
+}
+.menu1 {
+    padding: 25px 32px 25px 8px;
+    background-color:rgb(0, 0, 0);
+    color: rgb(216, 225, 228);
+    font-size: 17px;
+}
+.dol {
+    clip-path: polygon(0 0, 100% 0, 100% 25%, 0 8%);
+    background-color: black;
+    height: 260px;
+    width: 100%;
+}
+.menu1:hover {
+     
+    border-bottom-width: 4px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-color: rgb(216, 225, 228);
+    border-style: solid;
+    transition-duration: 2s;
+}
+.linia {
+    width: 100%;
+    height: 0.2px;
+    background-color: rgb(216, 225, 228);
+}
+.content1 {
+    width: 100%;
+    background-image:url(https://media-rockstargames-com.akamaized.net/tina-uploads/tina-modules/3871/07edb091bb329145ee3f3f01476adb40acc6457b.jpg);
+    height: 850px;
+    background-repeat: no-repeat;
+    background-size: 105% 110%;
+   
+}
+.content11 {
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 60%);
+}
+.top {
+    display: flex;
+    flex-direction: row;
+    background-color:rgb(0, 0, 0);
+}
+.kuptera {
+    align-items:end;
+    width: 400px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    padding-left: 260px;
+}
+.button {
+    background-color: black;
+    outline-color: rgb(216, 225, 228);
+    outline-style: solid;
+    outline-width: 1px;
+    padding: 8px 18px 8px 18px;
+    color: rgb(216, 225, 228);
+    font-size: 24px;
+    font-weight:600;
+    margin-right: 20px;
+}
+.button:hover {
+    color: black;
+    background-color: rgb(216, 225, 228);
+    outline-color: black;
+    transition-duration: 1s;
+}
+.person {
+    margin-right: 50px;
+}
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-self:center;
+    justify-content: start;
+    margin-left: 70px;
+    padding-right: 325px;
+}
+.linia2 {
+    width: 0.8px;
+    background-color:rgb(216, 225, 228); 
+    height: 30px;
+    margin-left:12px;
+    margin-right:12px;
+}
+.content112 {
+    color: white;
+}
+.container4 {
+    width: 75%;
+}
+.button {
+    background-color: black;
+    outline-color: rgb(216, 225, 228);
+    outline-style: solid;
+    outline-width: 1px;
+    padding: 8px 18px 8px 18px;
+    color: rgb(216, 225, 228);
+    font-size: 24px;
+    font-weight:600;
+    margin-right: 20px;
+}
+.button:hover {
+    color: black;
+    background-color: rgb(216, 225, 228);
+    outline-color: black;
+    transition-duration: 1s;
+}

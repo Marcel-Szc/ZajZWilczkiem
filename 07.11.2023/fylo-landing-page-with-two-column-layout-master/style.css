@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+body,html{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.raleway{
+    font-family: 'Raleway', sans-serif;
+}
+.open{
+    font-family: 'Open Sans', sans-serif;
+}
+header{
+    display: flex;
+    width: 1440px;
+    margin: 0 auto 0 auto;
+}
+.navbar{
+    display: flex;
+    list-style: none;
+    margin: 40px 0 40px 0;
+}
+.logoWrapper{
+    display: flex;
+    align-items: center;
+}
+.logoWrapper, nav{
+    width: 50%;
+}
+nav{
+    display: flex;
+    justify-content: end;
+}
+.navbar li{
+    padding: 0 0 0 30px;
+}
+.heroWrapper{
+    display: flex;
+    width: 1440px;
+    margin: 0 auto 0 auto;
+}
+.heroLeft, .heroRight{
+    width: 50%;
+}
+.heroRight img{
+    width: 100%;
+}
+.heroLeft{
+    display: flex;
+    align-items: center;
+}
+.heroLeft__wrapper {
+    padding: 40px 0 40px 0;
+}
+.heroLeft__wrapper h1  {
+    font-size: 2.6rem;
+}
+.heroLeft__wrapper p{
+    font-size: 1.3rem;
+}
+.heroInput__wrapper input{
+    width: 55%;
+    padding: 10px 20px 10px 20px;
+    border-radius: 3px;
+    border: solid 1px;
+}
+.heroInput__wrapper a {
+    background-color: hsl(224, 93%, 58%);
+    color: white;
+    padding: 10px 50px 10px 50px;
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+.content {
+    background-color: hsl(240, 75%, 98%);
+}
+.contentWrapper {
+    width: 1440px;
+    margin: 0 auto 0 auto;
+    display: flex;
+}
+.contentRight, .contentLeft {
+    width: 50%;
+}
+.contentRight img {
+    width: 100%;
+}
+.contentLeft__wrapper h2 {
+    font-size: 2.6rem;
+}
+.contentLeft__wrapper a{
+    color: #359a84;
+    text-decoration: none;
+    border-bottom: solid 1px #359a84;
+    padding-bottom: 3px; 
+}
+.contentLeft__wrapper p {
+    padding-right: 180px;
+    line-height: 1.6rem;
+}
+.wave{
+    width: 100%;
+}
+
+.wave__wrapper img {
+    width: 100%;
+    margin-bottom: -5px;
+}
+h2 {
+    font-family:'Raleway', sans-serif;
+}
+p {
+    font-family: 'Open-Sans', sans-serif;
+}
+.comment {
+   max-width: 45%;
+   background-color: white;
+   padding: 30px;
+   margin-top: 80px;
+   margin-bottom: 80px;
+   border-radius: 5px;
+}
+.commentWrapper img {
+    width: 20px;
+}
+.author {
+    display: flex;
+}
+.authorLeft img {
+    width: 32px;
+    border-radius: 100%;
+}
+.authorRight h4 {
+    font-size: .75rem;
+}
+.authorRight p {
+    font-size: .65rem;
+}
+.commentWrapper p {
+    padding: 0;
+}
+.authorRight h4, .authorRight p{
+    margin: 0;
+    padding:0;
+}
+.authorRight {
+    width: 55%;
+    display: block;
+}
+.access {
+    background-color: #575989;
+}
+.accessWrapper {
+    width: 1440px;
+    margin: 0 auto 0 auto;
+    display: flex;
+    padding: 80px 0px 80px 0px;
+}
+.accessLeft {
+    color: white;
+    width: 55%;
+}
+.accessLeft p {
+    padding-right: 280px; 
+}
+.accessLeft h3{
+    font-size: 2.2rem;
+    padding-top: 0;
+    margin-top: 0;
+}
+.accessRight a {
+    background-color: hsl(224, 93%, 58%);
+    color: white;
+    padding: 10px 50px 10px 50px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 3px;
+}
+.accessRight__input input {
+    width: 80%;
+    padding: 17px 200px 20px 17px;
+    border-radius: 3px;
+    border: none 0 ;
+}
+.accessRight__input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+footer {
+    background-color :#07043b;
+    color: white;
+    padding:80px 0 80px 0;
+}
+.footerWrapper{
+    width: 1440px;
+    margin: 0 auto 0 auto;
+    display: flex;
+}
+.footerWrapper__logo{
+    width: 1440px;
+    margin: 0 auto 0 auto;
+}
+.footerWrapper__logo img {
+    filter: brightness(0) invert(1);
+}
+.col1 {
+    width: 40%;
+}
+.col2, .col3, .col4 {
+    width:15%;
+}
+.col2 nav ul, .col3 nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+.col2 nav ul li, .col3 nav ul li {
+    padding: 10px 0 10px 0;
+}
+.col2 nav, .col3 nav {
+    display:flex;
+    justify-content: start;
+}
+.col1 a {
+    color: white;
+    text-decoration: none;
+    padding-left: 10px;
+}
+.col1 img {
+    padding-right: 10px;
+}

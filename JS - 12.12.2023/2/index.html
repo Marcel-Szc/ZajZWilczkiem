@@ -1,0 +1,166 @@
+<!--
+    function change(color){
+    document.getElementById("result").style.color = color;
+}
+function getValue() {
+    var inputValue = document.getElementById("text").value;
+    document.getElementById("result").innerText = inputValue;
+    console.log(inputValue);  
+}
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="scripts.js"></script>
+    <style>
+        .main {
+            height: 98.2vh;
+            display: flex;
+        }
+        .hero {
+            width: 60%;
+            height: 100%;
+            justify-content: center;
+            outline-width: 2px;
+            outline-style: solid;
+            outline-color: black;
+        }
+        .heroTXT {
+            width: 90%;
+            padding-left: 50px;
+            text-align:center;
+            font-size: 1rem;
+        }
+        .aside {
+            width: 20%;
+            height: 100%;
+            outline-width: 2px;
+            outline-style: solid;
+            outline-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .asideWrapper {
+            width: 90%;
+            padding-left: 12px;
+        }
+        button {
+            background-color: blue;
+            padding: 14px 20px 14px 20px;
+            font-size: 24px;
+            border-style: solid;
+        }
+        .BY {
+            background-color: black;
+            color: yellow;
+        }
+        .YB {
+            background-color: yellow;
+            color: black;;
+        }
+        .asideTop {
+            display: flex;
+            justify-content: space-between;
+        }
+        .asideTop2 {
+            display: flex;
+            justify-content: space-around;
+        }
+        .TD {
+            text-decoration: underline;
+        }
+        .asideBottom2 {
+            padding-bottom: 60px;
+            display: flex;
+            justify-content: center;
+        }
+        .asideMiddleTop {
+            margin-top: 25px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        .asideMiddleBottom {
+            text-align: center;
+            font-size:3rem;
+            margin-top: 30px;
+        }
+        #button {
+            margin-top: 25px;
+        }
+        #result {
+            font-size: 1.25rem;
+        }
+        #text {
+            padding: 14px 20px 14px 20px;
+            font-size: 1.25rem;
+        }
+        .asideBottom {
+            margin-top: 500px;
+            display: flex;
+            flex-direction: column;
+        }
+        .NO {
+            background-color: white;
+            padding: 0;
+            font-size: 1.30rem;
+            border-style: none;
+            width: 200px;
+            padding-top: 20px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="aside">
+          <div class="asideWrapper">
+            <div class="asideTop">
+            <button onclick="clickResult1()">A</button>
+            <button onclick="clickResult2()">A+</button>
+            <button onclick="clickResult3()">A++</button>
+            </div>
+            <div class="asideMiddleTop">
+                <input type="text" id="text" placeholder="wpisz wartość">
+                <button id="button" onclick="clickResult4()">Zmień</button>
+            </div>
+            <div class="asideMiddleBottom">
+                <div>REZULTAT: </div>
+                <div id="result"></div>
+            </div>
+              <div class="asideBottom">
+                <div class="asideBottomTop">
+                    <input type="color" id="TXT1">
+                    <button class="NO" onclick="clickResult9()">Zmień kolor czcionki</button>
+                </div>
+               <div class="asideBottomBottom">  
+                <input type="color" id="TXT2">
+                <button class="NO" onclick="clickResult10()">Zmień kolor tła</button>
+            </div>
+                
+              </div>
+          </div>
+        </div>
+        <div class="hero" id="H">
+            <div class="heroTXT" id="HTXT">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quasi labore tenetur quaerat maxime porro placeat, assumenda, maiores quae ratione blanditiis quibusdam tempora architecto, voluptatem nihil. Minus aperiam veniam reprehenderit ducimus culpa quidem illum nam pariatur nihil, odio quasi, officiis quibusdam placeat voluptatum ratione, error possimus deserunt sapiente hic impedit dolorum suscipit quos! Sed voluptatum repellat eligendi, quasi in placeat molestiae quis eius! Eum perspiciatis magni quidem. Labore, quasi! Quis corrupti expedita ipsum, hic quisquam eius nisi? Atque ex ipsum autem quia accusantium sunt qui quisquam. Eius omnis ad necessitatibus pariatur, consectetur labore, perferendis quas voluptatibus quod aut natus totam mollitia quibusdam, sit sint eligendi est temporibus quam unde cumque accusantium. Similique ab debitis, iste voluptates commodi nisi ipsum repellat quis numquam enim corporis dolorum doloribus! Illum repellat ut, minus at reprehenderit quaerat sit nisi eligendi recusandae eaque, soluta ducimus ullam blanditiis, vitae aliquid tenetur distinctio voluptatem et? Sed laborum saepe at veniam in corrupti minus. Nihil, dolore harum nobis fugit ullam provident dolorum iste aspernatur ipsam obcaecati, dolorem incidunt eos voluptas aliquam doloremque inventore quo, vitae tempora. Perspiciatis modi nesciunt ipsa numquam expedita! Quisquam aliquam perspiciatis facilis tenetur eaque? Alias minus dolorum quod, sed ipsa deleniti sunt assumenda exercitationem sint illum earum numquam esse fugit! Quaerat obcaecati mollitia et. Soluta nobis, obcaecati amet molestiae asperiores dolore ex repellendus vel qui ullam! Ratione optio facilis ipsam assumenda facere molestiae non expedita, nobis eos veritatis excepturi adipisci id quasi doloribus nihil illo quis! Tempora excepturi numquam iure aut pariatur optio necessitatibus distinctio, itaque fuga saepe doloribus sed blanditiis, sit, ea cum libero eius rerum labore nostrum recusandae dolorum explicabo. Corporis quam dicta, quibusdam laudantium quo quod debitis deserunt veritatis laboriosam ab iste, dolorum dolore ducimus voluptates optio accusantium porro excepturi, ex blanditiis saepe molestiae expedita? Fugiat est minima molestias, ut, alias dolorem at obcaecati aut labore saepe temporibus amet facere, porro unde. Aliquid sint, enim excepturi magnam magni ea perferendis in nostrum tenetur harum unde labore facilis eum veniam recusandae accusamus? Ab eveniet vitae natus quisquam, placeat quae cum molestiae omnis numquam tempore, officia quia, ullam temporibus architecto eum magni cupiditate delectus illum pariatur voluptas. Ratione doloribus sequi, quos saepe cumque in architecto assumenda fugit! Voluptatibus et laboriosam laborum adipisci voluptatem dicta, fugit natus quam illo quas iusto quisquam deserunt quo soluta excepturi libero vitae odit rerum. Distinctio quis exercitationem odio rem non suscipit deserunt facilis adipisci porro impedit aliquam nihil corrupti ut delectus, hic dicta aut nisi eum nobis et, soluta error tempore saepe laudantium. Doloremque corrupti impedit dolorum suscipit non earum ab perspiciatis, laudantium provident dolores officiis culpa quo sint architecto voluptatem laboriosam. Sapiente, tenetur iusto sed animi assumenda suscipit id aliquam est illum cum earum dolores nisi tempore!
+                </div>
+        </div>
+        <div class="aside">
+            <div class="asideTop2">
+                <button class="BY" onclick="clickResult5()">A</button>
+                <button class="YB" onclick="clickResult6()">A</button>
+                <button class="TD" onclick="clickResult7()">T</button>
+            </div>
+            <div class="asideBottom2">
+                <button onclick="clickResult8()">RESET</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

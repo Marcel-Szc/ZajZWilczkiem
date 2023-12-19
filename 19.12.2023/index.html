@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona Świateczna</title>
+</head>
+<body onload="snow()">
+    <div class="container">
+       <div class="sun"></div>
+       <div class="top">
+        <div class="topLeft">
+            <div class="houseBox">
+                <div class="houseFoundation1"></div>
+                <div class="window1"></div>
+                <div class="window2"></div>
+                <div class="houseFoundation2"></div>
+                <div class="door"></div>
+                <div class="roofBox">
+                    <div class="roof1"></div>
+                    <div class="roof2"></div>
+                </div>
+                <div class="houseFoundation3"></div>
+            </div>
+        </div>
+        <div class="topRight">
+            <div class="treeBox">
+                <div class="star"></div>
+                <div class="tree"></div>
+                <div class="trunk"></div>
+            </div>
+        </div>
+       </div>
+       <div class="bottom">
+       <div class="bottomRight"></div>
+       <div class="bottomLeft"></div>
+    </div>
+    </div>
+    <script>
+        function snow(){
+            for(let i =0; i<400; i++){
+            let snow = document.createElement("div");
+            snow.classList.add("snow");
+            document.getElementsByClassName("container")[0].appendChild(snow);
+            let position1 = Math.floor(Math.random()*70);
+            let position2 = Math.floor(Math.random()*100);
+            snow.style.top = position1 + "%";
+            snow.style.left = position2 + "%";
+            console.log("SIEMA");
+            }
+        }
+    </script>
+</body>
+</html>

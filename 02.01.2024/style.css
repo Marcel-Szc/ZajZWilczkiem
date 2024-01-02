@@ -1,0 +1,105 @@
+
+*{
+    margin:0;
+    padding:0;
+    border:0;
+}
+body {
+    width: 99vw;
+}
+header{
+    font-size: 32px;
+    background-color: rgb(114, 102, 102);
+    text-align:center;
+    height: 4.5%;
+
+}
+.main {
+    display: flex;
+    height: 96vh;
+    width: 100%;
+}
+.left, .right {
+    width: 22.5%;
+    height: 100%;
+}
+.middle {
+    width: 55%;
+    height: 100%;
+}
+.hero {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+.heroWrapper{
+    width:70%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 350px;
+}
+.heroText {
+    border: solid 2px black;
+    padding: 10px 5px 50px 10px;
+    width: 100%;
+    font-size: 24px;
+    color: black;
+    letter-spacing: 1;
+    font-style: normal;
+}
+.heroButton {
+    outline: solid 2px black;
+    width: 150px;
+    height: 25px;
+    margin-top:20px;
+    margin-left: 0;
+}
+.right {
+    border-left: 2px black solid;
+}
+.left{
+    border-right: 2px black solid;
+}
+.asideTop, .asideBottom{
+    height: 50%;
+    margin-left: 20px;
+}
+.text {
+    font-size: 26px;
+    text-align: center;
+    margin-right: 40px;
+}
+.input {
+    outline: 2px black solid;
+    background-color: lightgray;
+    width: 350px;
+    height: 25px;
+}
+.box {
+    margin-top: 20px;
+}
+.nwm {
+    margin-top: 40px;
+}
+.buttons {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+}
+button {
+    outline: 2px solid black;
+    padding: 4px;
+    width: 50%;
+}
+.but {
+    margin-left: 60px;
+}
+.span {
+    font-size: 24px;
+    display:flex;
+    background-color: darkgreen;
+    color:aqua;
+    border: 1px solid black;
+}

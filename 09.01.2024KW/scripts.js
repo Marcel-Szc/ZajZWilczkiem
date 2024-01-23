@@ -33,5 +33,7 @@ function updateClock() {
     var sum = hours2+minutes2+seconds2;
     document.getElementById("sum").textContent = sum;
 }
-setInterval(updateClock, 1000);
+setInterval(updateClock, 500);
 updateClock();
+
+

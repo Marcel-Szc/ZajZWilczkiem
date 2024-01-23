@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div class="hero">
+        <div class="heroWrapper">
+            <div class="heroTop">
+                <div class="heroTopAB">
+                    <div class="heroTopA">
+                        A: <input class="inputLong" id="A" type="text">
+                    </div>
+                    <div class="heroTopB">
+                        B: <input class="inputLong" id="B" type="text">
+                    </div>
+                    <div class="heroTopC">
+                        C:  <input class="inputLong" id="C" type="text">
+                    </div>
+                </div>
+                <div class="heroTopCheck">
+                    <div class="heroTopCheckbox">
+                        Dodawanie <input class="inputCheck" name="grupa" id="doda" type="radio">
+                    </div>
+                    <div class="heroTopCheckbox">
+                        Odejmowanie <input class="inputCheck" name="grupa" id="odej" type="radio">
+                    </div>
+                    <div class="heroTopCheckbox">
+                        Mnożenie <input class="inputCheck" name="grupa" id="Mnoż" type="radio">
+                    </div>
+                    <div class="heroTopCheckbox">
+                        Dzielenie <input class="inputCheck" name="grupa" id="Dziel" type="radio">
+                    </div>
+                </div>
+            </div>
+            <div class="heroBottom">
+                <h3>WYNIK:  </h3>
+                <div class="wyniki">
+                    <div id="wynik"></div>
+                    <div id="parzystoscA"></div>
+                    <div id="parzystoscB"></div>
+                    <div id="parzystoscC"></div>
+                </div>
+
+                <button onclick="kliku()">LICZ</button>
+            </div>
+        </div>
+     </div>
+    
+
+    <script src="scripts.js"> </script>
+</body>
+</html>

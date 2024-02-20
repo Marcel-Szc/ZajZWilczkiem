@@ -1,0 +1,42 @@
+body, html {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+nav {
+    width: 98.26vw;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    outline: 2px black solid;
+}
+.main {
+    display: flex;
+    width: 98.26vw;
+    height: 92.5vh;
+}
+.hero {
+    border: 2px black solid;
+    width: 70%;
+    display:flex;
+    flex-wrap: wrap;
+    flex-grow: 20px;
+    overflow-y: scroll;
+}
+.aside {
+    border: 2px black solid;
+    width: 15%;
+}
+button {
+    background-color: white;
+    font-size: 14px;
+    margin-top: -5px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.hero div {
+    margin: 12px 12px 12px 12px;
+    text-align: center;
+}

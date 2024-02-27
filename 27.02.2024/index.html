@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie</title>
+</head>
+<body>
+    <script>
+        /*var tablica = new Array(1,2,3,8,5,9,6,7)
+        console.log(tablica);
+         for(let i = 1; i <= 1; i++) {
+           c = tablica.sort((a, b) => {
+              return a - b;
+            });
+          console.log(c);
+        } */
+        var tablica1 = new Array();
+        var tablica2 = new Array();
+        function dodaj()
+        {
+        var input = document.getElementById("input").value;
+        document.getElementById("input").value = "";
+        tablica1.push(input);
+        }
+        function licz() {
+            console.clear("");
+        console.log(tablica1);
+        console.log("----------Liczby parzyste:----------");
+        for ( i = 1; i <= tablica1.length; i++)
+        {
+          if (tablica1[i] % 2 == 0) {
+             console.log(tablica1[i]);
+          } 
+        }
+        console.log("----------Suma:----------");
+        var c = 0;
+        for (i = 0; i < tablica1.length; i++)
+        {
+            c += parseInt(tablica1[i]);
+        }
+        console.log(c);
+        console.log("----------Mininalne i maksymalne liczby:----------");
+        for (i = 0; i < tablica1.length; i++) {
+        var min = tablica1[0];
+        for(var i = 0; i < tablica1.length; i++)
+             if(tablica1[i] < min) {
+                min = tablica1[i]; 
+             }
+        }
+        console.log(min)
+        console.log("----------Odwórcona tablica:----------");
+        
+       for (i = tablica1.length - 1; i >= 0; i--) {
+            parseInt(tablica1[i]);
+            tablica2.push(tablica1[i]);
+       }
+        console.log(tablica2);
+    }
+    </script>
+    <div class="hero">
+        <div class="heroWrapper">
+            <input id="input" type="text" placeholder="Wpisz wartości...">
+            <button onclick="dodaj()">Dodaj</button>
+            <button onclick="licz()">Licz</button>
+        </div>
+    </div>
+</body>
+</html>

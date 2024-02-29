@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+html, body {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    height: 98vh;
+    width: 1440px;
+    background-color: hsl(185, 41%, 84%) ;
+}
+.main{
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    height: 92.5%;
+}
+footer {
+    height: 7.5%;
+    width: 100%;
+}
+.attribution{
+    margin-left: 440px;
+}
+.mainWrapper{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 460px;
+}
+.hero {
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    background-color: hsl(0, 0%, 100%);
+    width: 1100px;
+    height: 530px;
+    border: 1px solid white;
+    border-radius: 20px;
+    box-shadow: 1px 8px 15px -1px rgba(66, 68, 90, 1);
+}
+.heroWrapper {
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    width: 90%;
+    height: 90%;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.logo {
+    margin-left: 460px;
+    margin-bottom: 70px;
+}
+.heroRight {
+    background-color: hsl(183, 100%, 15%);
+    border: 1px solid hsl(183, 100%, 15%);
+    border-radius: 20px;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.przycisk {
+    width: 89%;
+    height: 32px;
+    font-size: 18px;
+    background-color: hsl(172, 67%, 45%);
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    border: 1px none hsl(172, 67%, 45%);
+    border-radius: 7.8px;
+    margin-left: 15px;
+    margin-bottom: 30px;
+    color: hsl(183, 100%, 15%);
+}
+.heroRightTop{
+    height:50%;
+    display: flex;
+    flex-direction: column;
+}
+.HRTTop {
+    margin-left: 20px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.HRTBottom {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.heroRightBottom{
+    height:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.HRTWrapper {
+    display: flex;
+    flex-direction: column;
+}
+#HRTdolar {
+    color:hsl(172, 67%, 45%);
+    font-size: 40px;
+    margin-top: -8.75px;
+}
+.HRTtext {
+    color: white;
+    font-size: 20px;
+}
+.HRTsmallText {
+    color:hsl(186, 14%, 43%) ;
+    font-size: 14px;
+}
+.heroLeft {
+    width: 60%;
+    height: 100%;
+}
+#bill {
+    border: 0px none;
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    background-color: hsl(185, 41%, 84%);
+    width: 100px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+#people {
+    border: 0px none;
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    background-color: hsl(185, 41%, 84%);
+    width: 100px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+#custom{
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+}
+.HLBTop {
+    font-size: 16px;
+    color: hsl(186, 14%, 43%);
+}
+.HLBBottom {
+    display: flex;
+    justify-content: space-between;
+    background-color: hsl(185, 41%, 84%);
+    width: 95%;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+.HLBBtext {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.but {
+   font-family: "Space Mono", monospace;
+   font-weight: 700;
+   font-style: normal;
+   color: hsl(189, 41%, 97%);
+   background-color: hsl(183, 100%, 15%);
+   font-size: 30px;
+   border: 0px none;
+   width:134px;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   text-align: center;
+   border-radius: 10px;
+}
+.alter {
+    color: hsl(183, 100%, 15%);
+    background-color:hsl(185, 41%, 84%);
+}
+#custom {
+    color: hsl(186, 14%, 43%);
+    background-color: hsl(185, 41%, 84%) ;
+    border: 0px none;
+    font-size: 30px;
+    width:130px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    border-radius: 10px;
+}
+.bottomOptions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.topOptions {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.buttons{
+    margin-top: 80px;
+    margin-bottom: 80px;
+    margin-left: -30px;
+}
+.right {
+    margin-left: 30px;
+}

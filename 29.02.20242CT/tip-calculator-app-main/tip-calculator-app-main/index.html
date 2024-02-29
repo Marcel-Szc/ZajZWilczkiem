@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="style.css">
+  <script src="scripts.js"></script>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<div class="main">
+  <div class="mainWrapper">
+    <img class="logo" src="./images/logo.svg" height="73px" width="89px">
+    <div class="hero">
+      <div class="heroWrapper">
+        <div class="heroLeft"> 
+          <div class="HLBill">
+            <div class="HLBTop">Bill</div>
+            <div class="HLBBottom">
+              <div class="HLBBtext"><img src="./images/icon-dollar.svg" width="18.5px" height="20px">
+              </div>
+              <input id="bill" type="text" placeholder="0">
+            </div>
+          </div>
+
+          <div class="buttons">
+            <div class="HLBTop right">Select Tip %</div>
+            <div class="topOptions">
+             <button class="but" onclick="proc5()">5%</button>
+             <button class="but" onclick="pro10()">10%</button>
+             <button class="but alter" onclick="proc15()">15%</button>
+            </div>
+            <div class="bottomOptions">
+             <button class="but" onclick="proc25()">25%</button>
+             <button class="but" onclick="proc50()">50%</button>
+             <input id="custom" type="text" placeholder="Custom">
+            </div>
+          </div>
+      
+          <div class="HLBTop">Number of People</div>
+            <div class="HLBBottom">
+              <div class="HLBBtext"><img src="./images/icon-person.svg" width="18.5px" height="20px">
+              </div>
+              <input id="people" type="text" placeholder="0">
+            </div>
+          </div>
+         <div class="heroRight">
+          <div class="heroRightTop">
+           <div class="HRTTop">
+            <div class="HRTWrapper">
+              <div class="HRTtext">Tip Amount</div>
+              <div class="HRTsmallText">/ person</div>
+            </div>
+            <div id="HRTdolar">$0</div>
+          </div> 
+          <div class="HRTBottom">
+            <div class="HRTWrapper">
+              <div class="HRTtext">Total</div>
+              <div class="HRTsmallText">/ person</div>
+            </div>
+            <div id="HRTdolar">$0</div>
+          </div>
+          </div>
+          <div class="heroRightBottom">
+            <button class="przycisk" onclick="reset()">Reset</button>
+          </div>
+         </div>
+       </div>
+      </div>
+   </div>
+</div>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer>
+</body>
+</html>

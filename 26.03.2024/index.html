@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Calculator</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header class="main-header container">
+        <h1>Calculator <span>JavaScript</span></h1>
+    </header>
+    <section class="main-display container">
+        <p id="displayTop" class="main-display-numbers-top">
+            0
+        </p>
+        <p id="display" class="main-display-numbers">
+            0
+        </p>
+    </section>
+    <section class="main-buttons-all container">
+        <div class="row">
+            <div class="row-col-1-4">
+                <button id="percent" class="main-button main-button-color-2">%</button>
+            </div>
+            <div class="row-col-1-4">
+                <button id="square" class="main-button main-button-color-2">square</button>
+            </div>
+            <div class="row-col-1-4">
+                <button id="reset" class="main-button main-button-color-2">C</button>
+            </div>
+            <div class="row-col-1-4">
+                <button id="divide" class="main-button main-button-color-2">/</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row-col-1-4">
+                <button id="7" class="main-button main-button-numbers" data-number="7">7</button>
+            </div>
+            <div class="row-col-1-4">
+                <button id="8" class="main-button main-button-numbers" data-number="8">8</button>
+            </div>
+            <div class="row-col-1-4">
+                <button id="9" class="main-button main-button-numbers" data-number="9">9</button>
+            </div>
+            <div class="row-col-1-4">
+                <button id="multiply" class="main-button main-button-color-2">x</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row-col-1-4">
+                <button id="4" class="main-button main-button-numbers" data-number="4">4</button>
+            </div>
+            <div class="row-col-1-4">
+                <button id="5" class="main-button main-button-numbers" data-number="5">5</button>
+            </div>
+            <div class="row-col-1-4">
+                <button id="6" class="main-button main-button-numbers" data-number="6">6</button>
+            </div>
+            <div class="row-col-1-4">
+                <button id="minus" class="main-button main-button-color-2">-</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row-col-1-4">
+                <button id="1" class="main-button main-button-numbers" data-number="1">1</button>
+            </div>
+            <div class="row-col-1-4">
+                <button id="2" class="main-button main-button-numbers" data-number="2">2</button>
+            </div>
+            <div class="row-col-1-4">
+                <button id="3" class="main-button main-button-numbers" data-number="3">3</button>
+            </div>
+            <div class="row-col-1-4">
+                <button id="plus" class="main-button main-button-color-2">+</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row-col-1-4">
+                <button id="0" class="main-button main-button-numbers" data-number="0">0</button>
+            </div>
+            <div class="row-col-1-4">
+                <button id="mirror" class="main-button main-button-color-2">+/-</button>
+            </div>
+            <div class="row-col-1-4">
+                <button id="comma" class="main-button main-button-color-2">,</button>
+            </div>
+            <div class="row-col-1-4">
+                <button id="equal" class="main-button main-button-color-2 ">=</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

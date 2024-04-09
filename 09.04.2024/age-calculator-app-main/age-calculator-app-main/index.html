@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body {
+      background-color: hsl(0, 0%, 86%);
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    .hero {
+      display: flex;
+      justify-content: center;
+    }
+    .heroWrapper {
+      margin-top: 200px;
+      background-color: hsl(0, 0%, 94%);
+      height: 550px;
+      width: 735px;
+      border: solid hsl(0, 0%, 94%) 1px;
+      border-radius: 25px;
+      border-bottom-right-radius: 25%;
+    }
+    .heroTopBox {
+      display: flex;
+      margin-top: 34px;
+      margin-left: 15px;
+    }
+    .heroText {
+      font-weight: 400;
+      margin-left: 10px;
+    }
+    .HeroInput {
+      font-weight: 700;
+      font-size: 27px;
+      padding-left: 12px;
+      padding-right: 36px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      width: 80px;
+      background-color: hsl(0, 0%, 94%);
+      border: 0.3px solid rgb(175, 175, 175);
+      color: hsl(0, 1%, 44%);
+      margin-left: 10px;
+      border-radius: 8px;
+    }
+    .HeroD, .HeroM, .HeroY {
+      margin-left: 30px;
+    }
+    .HeroButton {
+      display: flex;
+    }
+    .linia {
+      width: 520px;
+      height: 1px;
+      background-color: rgb(175, 175, 175);
+      margin-top:35px;
+      margin-left: 45px; 
+    }
+    #button {
+      background-color: hsl(259, 100%, 65%);
+      border: 1px solid hsl(259, 100%, 65%);
+      height: 75px;
+      width: 75px;
+      border-radius: 50%;
+    }
+    .HOTOP {
+      display: flex;
+    }
+    .HeroOut_text {
+     font-size: 74px;
+     color:rgb(19, 20, 26);
+     font-weight: 800;
+    }
+    #HeroYOut, #HeroDOut, #HeroMOut {
+      color: hsl(259, 100%, 65%);
+      padding-right:10px;
+    }
+    .HeroOutput {
+      margin-left: 45px;
+    }
+    #button :hover {
+      background-color: black;
+      border-color:  black;
+    }
+  </style>
+</head>
+<body>
+<div class="hero">
+ <div class="heroWrapper">
+ <div class="heroTopBox">
+  <div class="HeroD">
+  <div class="HeroText">Day</div>
+  <input id="HeroDInput" class="HeroInput" type="number" max="31" placeholder="DD">
+  </div>
+  <div class="HeroM">
+  <div class="HeroText">Month</div>
+  <input id="HeroMInput" class="HeroInput" type="number" max="31" placeholder="MM">
+  </div>
+  <div class="HeroY">
+  <div class="HeroText">Year</div>
+  <input id="HeroYInput" class="HeroInput" type="number" max="31" placeholder="YYYY">
+</div>
+</div>
+<div class="HeroButton">
+  <div class="linia"></div><button onclick="licz()" id="button"><img src="./assets/images/icon-arrow.svg"></button>
+</div>
+<div class="HeroOutput">
+  <div class="HOTOP">
+    <em><div id="HeroYOut" class="HeroOut_text">--</div></em><div class="HeroOut_text"><em>years</em></div>
+</div>
+<div class="HOTOP">
+  <em><div id="HeroMOut" class="HeroOut_text">--</div></em><div class="HeroOut_text"><em>months</em></div>
+ </div>
+ <div class="HOTOP">
+  <em><div id="HeroDOut" class="HeroOut_text">--</div></em><div class="HeroOut_text"><em>days</em></div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Marcel-Szc">Lester Crest</a>.
+  </div>
+</footer>
+  <script>
+
+   function licz() {
+        var dzienW = document.getElementById("HeroDInput").value;
+        var miesW = document.getElementById("HeroMInput").value;
+        var rokW = document.getElementById("HeroYInput").value;
+
+        var data = new Date();
+
+        var dzienT = data.getDate();
+        var miesT = data.getMonth();
+        var rokT = data.getFullYear();
+
+        rokU = rokT - rokW;
+        miesU = miesT - miesW + 1;
+        dzienU = dzienT - dzienW;
+
+        var dayMax = 0;
+        if (miesW == 2) {
+          dayMax = 28;
+        }
+        else if (miesW == 1 || miesW == 3 || miesW == 5 || miesW == 7 || miesW == 8 || miesW == 10 || miesW == 12) {
+          dayMax = 30;
+        }
+        else if (miesW > 12) {
+          alert("Dzien!");
+        } 
+        else {
+          dayMax = 31;
+        }
+        if (dzienW <= dayMax) {
+
+        if (dzienU < 0) {
+          miesU = miesU - 1;
+            dzienU = dzienU + dayMax;
+        }
+        if (miesU < 0) {
+           rokU = rokU - 1;
+           miesU = miesU + 12;
+        }
+        if (miesU == 0) {
+            miesU = 0;
+        }
+        if (dzienU == 0) {
+            dzienU = 0;
+        }
+        
+        if (rokU >= 0) {
+          document.getElementById("HeroYOut").textContent = rokU;
+        }
+        else {
+          alert("Podano nieprawidłowy rok!")
+        }
+
+        if (miesU >= 0 && miesU <= 13) {
+          document.getElementById("HeroMOut").textContent = miesU;
+        }
+        else {
+          alert("Podano nieprawidłowy miesiąc!")
+        }
+
+        if (dzienU >= 0 && dzienU  <= dayMax) {
+          document.getElementById("HeroDOut").textContent = dzienU;
+        }
+        else {
+          alert("Podano nieprawidłowy dzien!")
+        }
+      }
+      else {
+        alert("zły dzien")
+      }
+   }
+  </script>
+</body>
+</html>

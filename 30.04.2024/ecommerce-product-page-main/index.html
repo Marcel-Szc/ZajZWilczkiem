@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | E-commerce product page</title>
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+     * {
+      font-family: "Kumbh Sans", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      color: hsl(220, 13%, 13%);
+     }
+     .menu:hover {
+        padding-bottom: 55px;
+        border-bottom: 5px solid hsl(26, 100%, 55%);
+     }
+     .imgHover:hover {
+      opacity: 0.55;
+     }
+     .imgHover:active {
+      opacity: 0.35;
+      outline: 3px solid hsl(26, 100%, 55%);
+     }
+     .account img:hover {
+      outline: 3px solid hsl(26, 100%, 55%);
+      border-radius: 50%;
+     }
+    body, html {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+     }
+     nav {
+      display: flex;
+      margin: auto;
+      margin-top: 60px;
+      width: 1490px;
+      justify-content: space-between;
+     }
+     .menu{
+      padding-bottom: 60px;
+     }
+     .middle {
+      display: flex;
+      justify-content: space-around;
+      width: 400px;
+      margin-right: 500px;
+     }
+     hr {
+      width: 80%;
+      margin: auto;
+     }
+     #imageBig, #imageBig2 {
+      width: 400px;
+      height: 400px;
+      background-image: url(images/image-product-1.jpg);
+      background-size: 101%;
+      background-position-x: center;
+      background-position-y: center;
+      border: 1px solid transparent;
+      border-radius: 18px;
+     }
+     .hero {
+      margin: auto;
+      margin-top: 100px;
+      margin-left: 350px;
+      width: 1390px;
+     }
+     .heroWrapper {
+      display: flex;
+     }
+     .imageOptions {
+      display: flex;
+      margin-top: 30px;
+      justify-content: space-between;
+     }
+     .imgHover {
+      height: 80px;
+      width: 80px;
+      background-size: 105%;
+      background-position-x: center;
+      background-position-y: center;
+      border: 1px solid transparent;
+      border-radius: 8px;
+     }
+     #imageOption1 {
+      background-image: url(images/image-product-1-thumbnail.jpg);
+     }
+     #imageOption2 {
+      background-image: url(images/image-product-2-thumbnail.jpg);
+     }
+     #imageOption3 {
+      background-image: url(images/image-product-3-thumbnail.jpg);
+     }
+     #imageOption4 {
+      background-image: url(images/image-product-4-thumbnail.jpg);
+     }
+     .heroRight {
+      margin-right: 240px;
+     }
+     .heroLeft {
+      margin-top: 40px;
+      width: 580px;
+     }
+     .corpName {
+      color: hsl(26, 100%, 55%);
+      font-weight: 700;
+     }
+     .name {
+      margin-top:28px;
+      font-weight: 700;
+      font-size: 3.2rem;
+      z-index: 1;
+     }
+     .description {
+      margin-top:28px;
+      width: 400px;
+     }
+     .price {
+      margin-top:28px;
+      width: 200px;
+     }
+     .priceWrapper {
+      display: flex;
+     }
+     .priceAfter {
+      font-weight: 700;
+      font-size: 1.8rem;
+     }
+     .priceDiscount {
+      font-weight: 700;
+      font-size: 1rem;
+      color: hsl(26, 100%, 55%);
+      background-color: hsl(25, 100%, 94%);
+      text-align: center;
+      height: 17px;
+      padding: 7px;
+      padding-bottom: 2px;
+      padding-top: 2px;
+      margin-top: 5px;
+      margin-left: 10px;
+      border: 1px solid transparent;
+      border-radius: 5px;
+     }
+     .priceBefore {
+      font-weight: 700;
+      color: hsl(220, 14%, 75%);
+     }
+     .shopping {
+      display: flex;
+     }
+     #addCart {
+      background-color: hsl(26, 100%, 55%);
+      color: white;
+      font-weight: 500;
+      padding: 15px 80px 15px 80px;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      margin-left: 20px;
+      display: flex;
+     }
+     #addCart:hover {
+      opacity: 0.55;
+     }
+     .text {
+      color: white;
+      margin-left: 10px;
+      margin-top: 3px;
+     }
+     .add {
+      background-color: hsl(223, 64%, 98%);
+      border: 1px solid transparent;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+     }
+     .plus {
+      background-color: transparent;
+      border: transparent;
+    }
+    .plus:hover {
+      opacity: 0.55;
+     }
+    #amount {
+      background-color: transparent;
+      border: transparent;
+      text-align: center;
+      width: 100px;
+    }
+    .shopcart {
+      background-color: white;
+      border: transparent;
+      margin-bottom: 20px;
+    }
+    .IOv2 {
+      width: 600px;
+    }
+    .IOv2 .imgHover {
+      height: 110px;
+      width: 110px;
+    }
+    #imageBig2 { 
+      width: 600px;
+      height: 600px;
+    }
+    .HRv2BG {
+      background-color: black;
+      height: 100vh;
+      width: 100vw;
+      opacity: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0px;
+    }
+    .HRv2 {
+      position: absolute;
+      top: 20px;
+    }
+    .HRv2__Wrapper {
+      margin-top: 60px;
+      margin-left: 300px;
+    }
+    .IOv2 {
+      position: absolute
+    }
+    .quit {
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      background-color: transparent;
+      border: none;
+    }
+    .quit img {
+      width: 27px;
+      height: 27px;
+      margin-left: 560px;
+    }
+    .but {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      position: absolute;
+    }
+    .prev {
+      top: 400px;
+      left: 280px;
+    }
+    .next {
+      top: 400px;
+      left:880px;
+    }
+    #ShopCart {
+      box-shadow: -7px 25px 44px -3px rgba(66, 68, 90, 0.45);
+      width: 400px;
+      height: 250px;
+      border: 1px transparent solid;
+      border-radius: 5%;
+      left: 1300px;
+      position: absolute;
+      background-color: white;
+    }
+    .CartTop_Text {
+      height: 20%;
+    }
+    .Cart {
+      height: 80%;
+      z-index: 20;
+    }
+    .TXT {
+      padding-left: 20px;
+      padding-top: 18px;
+    }
+    .line {
+      width: 370px;
+      margin-left: 12px;
+      height: 0.5px;
+      background-color: rgb(70, 70, 70);
+    }
+    #CartText {
+      margin-left: 130px;
+      margin-top: 90px;
+    }
+    .CCTop {
+      display: flex;
+      margin-left: 50px;
+      margin-top: 30px;
+    }
+    .CCBottom {
+      margin-left: 50px;
+    }
+    .CCTMBottom{
+      display: flex;
+    }
+    .CCTRight {
+      background-color: transparent;
+      border: transparent;
+    }
+    @media screen and (max-width: 375px) {
+      .menu {
+        font-size: 0px;
+      }
+      .middle {
+        height: 0px;
+        width: 0px;
+      }
+      .hero {
+        margin-left: 0;
+      }
+      hr {
+        width: 0px;
+      }
+      .heroWrapper {
+        flex-direction: column;
+      }
+      .imageOptions{
+       width:0px;
+       height: 0px;
+      }
+      #imageBig {
+        width: 1490px;
+        height: 1490px;
+        border-radius: 0px;
+      }
+      .imgHover {
+        background-image: none;
+      }
+      .corpName {
+        font-size: 3.6rem;
+        width: 600px;
+      }
+      .name {
+        font-size: 8.4rem;
+        width: 1400px;
+      }
+      .description {
+        font-size: 4rem;
+        width: 1360px;
+      }
+      .heroLeft {
+        margin-left: 90px;
+      }
+      .price {
+        display: flex;
+        flex-direction: row;
+      }
+      .priceAfter {
+       font-size: 8rem;
+      }
+      .priceDiscount {
+        font-size: 4.5rem;
+        padding: 10px 25px 1px 25px;
+        height: 100px;
+        width: 180px;
+        border-radius: 25px;
+        margin-top: 20px;
+        margin-left: 40px;
+      }
+      .priceBefore {
+        margin-top: 30px;
+        margin-left: 300px;
+        font-size: 4rem;
+      }
+      .shopping {
+        flex-direction: column;
+      }
+      #addCart {
+        width: 1300px;
+        justify-content: center;
+        padding: 50px 200px 50px 200px;
+        margin-left: 0px;
+        margin-top: 50px;
+        border-radius: 35px;
+      }
+      .text {
+        font-size: 4rem;
+        margin-top: 10px;
+        margin-left: 60px;
+      }
+      #addCart img {
+        height: 100px;
+        width: 100px;
+      }
+      .addCart #Text {
+        margin-bottom: 20px;
+      }
+      .add {
+        width: 1300px;
+        height: 200px;
+        border-radius: 35px;
+      }
+      .plus img{
+        height: 50px;
+        width: 50px;
+        margin-right: 50px;
+      }
+      .minus img {
+        height: 20px;
+        margin-left: 50px;
+        margin-right: 0px;
+      }
+      #amount {
+        font-size: 5rem;
+        font-weight: 700;
+        color: black;
+      }
+      .logo img {
+        height: 110px;
+        width: 550px;
+        margin-right: -190px;
+      }
+      #menuMobile {
+        width: 100px;
+        height: 115px;
+        padding: 2px;
+        border: 1px solid transparent;
+        background-image: url(images/icon-menu.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        margin-left: 40px;
+        margin-top: 20px;
+      }
+      .shopcart img {
+        height: 110px;
+        width: 110px;
+      }
+      .account img{
+        height: 110px;
+        width: 110px;
+      }
+      .account {
+        margin-left: 40px;
+        margin-right: 40px;
+      }
+    }
+    @media screen and (max-width: 2000px) and (min-width: 376px) {
+      #menuMobile {
+      width: 0px;
+      height: 0px;
+      padding: 0;
+      border: 0px;
+    }
+    }
+  </style>
+</head>
+<body onload="def()" >
+<nav>
+   <button onclick="menu()" id="menuMobile"></button>
+  <div class="left">
+  <div class="logo"><img src="images/logo.svg"></div>
+</div>
+  <div class="middle">
+    <a class="menu">Collections</a>
+    <a class="menu">Men</a>
+    <a class="menu">Women</a>
+    <a class="menu">About</a>
+    <a class="menu">Contact</a>
+  </div>
+  <div class="right"></div>
+    <button onclick="cart()" class="shopcart"><img src="images/icon-cart.svg" height="35px" width="35px"></button>
+    <div class="account"><img src="images/image-avatar.png" height="50px" width="50px"></div>
+  </nav>
+  <hr>
+  <div id="ShopCart">
+    <div class="CartTop_Text">
+      <div class="TXT">Cart</div>
+    </div>
+    <div class="line"></div>
+    <div class="Cart">
+      <div id="CartText">Your cart is empty</div>
+      <div id="CartContent">
+       <div class="CCTop">
+        <div class="CCTLeft"><img src="images/image-product-1-thumbnail.jpg" height="60px" width="60px"></div>
+        <div class="CCTMiddle">
+          <div class="CCTMTop">Fall Limited Edition Sneakers</div>
+          <div class="CCTMBottom">
+            <div id="CCTMBLeft"></div>
+            <div id="CCTMBRight"></div>
+          </div>
+        </div>
+        <button onclick="deleteCart()"  class="CCTRight"><img src="images/icon-delete.svg"></button>
+       </div>
+       <div class="CCBottom">
+        <button id="addCart">Checkout</button>
+       </div>
+      </div>
+    </div>
+  </div>
+<div class="main">
+<div class="hero">
+  <div class="heroWrapper">
+    <div class="heroRight">
+      <div id="imageBig" id="inv" onclick="pokaz()"></div>
+      <div class="imageOptions">
+        <div onclick="image1()" id="imageOption1" class="imgHover"></div>
+        <div onclick="image2()" id="imageOption2" class="imgHover"></div>
+        <div onclick="image3()" id="imageOption3" class="imgHover"></div>
+        <div onclick="image4()" id="imageOption4" class="imgHover"></div>
+      </div>
+    </div>
+    <div class="heroLeft">
+      <div class="HLTop">
+        <div class="corpName">SNEAKER COMPANY</div>
+        <div class="name">Fall Limited Edition Sneakers</div>
+        <div class="description">
+          These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.
+        </div>
+        <div class="price">
+          <div class="priceWrapper">
+          <div class="priceAfter">$125.00</div>
+          <div class="priceDiscount">50%</div>
+        </div>
+          <div class="priceBefore">$̶2̶5̶0̶.0̶0̶</div>
+        </div>
+        <div class="shopping">
+          <div class="add">
+            <button onclick="minus()" class="plus minus"><img src="images/icon-minus.svg"></button>
+            <input id="amount" type="text" placeholder="0" >
+            <button onclick="add()" class="plus"><img src="images/icon-plus.svg"></button>
+          </div>
+          <button id="addCart" onclick="addToCart()"><img src="images/icon-cartWhite.svg"> <div class="text"> Add to cart</div></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="HRv2BG" id="HRv2BG"></div>
+  <div class="heroRight HRv2" id="HRv2">
+    <div class="HRv2__Wrapper">
+      <button onclick="zamknij()" class="quit"><img src="images/icon-close.svg"></button>
+      <button class="but next"><img src="images/icon-next.svg"></button>
+      <div id="imageBig2" class="IMGv2"></div>
+      <button class="but prev"><img src="images/icon-previous.svg"></button>
+    <div class="imageOptions IOv2">
+      <div onclick="image5()" id="imageOption1" class="imgHover"></div>
+      <div onclick="image6()" id="imageOption2" class="imgHover"></div>
+      <div onclick="image7()" id="imageOption3" class="imgHover"></div>
+      <div onclick="image8()" id="imageOption4" class="imgHover"></div>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

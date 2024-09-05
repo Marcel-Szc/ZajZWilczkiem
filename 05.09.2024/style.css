@@ -1,0 +1,82 @@
+html,body {
+    padding: 0;
+    margin: 0;
+    width: 98.75vw;
+    height: 1440px;
+}
+.header {
+    width: 100%;
+    height: 100px;
+    position: sticky;
+    top: 0;
+}
+.left, .right {
+    width: 50%;
+    height: 100%;
+}
+.logo img {
+    width: 60px;
+    height: 60px;
+}
+.one, .two, .three {
+    width: 90px;
+    height: 60px;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+}
+.top {
+    display: flex;
+    justify-content: center;
+}
+.topWrapper{
+    width: 65%;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+}
+.imageTop img{
+    height: 400px;
+    width: 400px;
+}
+.mid {
+    height: 370px;
+    width: 100%;
+    background-image: url(https://picsum.photos/id/3/200/600);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.bottom {
+    display: flex;
+    justify-content: center;
+}
+.form {
+    width: 600px;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+}
+#imie, #nazwisko {
+    width: 400px;
+    height: 40px;
+    margin-bottom: 15px;
+}
+#liczba1, #liczba2 {
+    width: 160px;
+    height: 40px;
+    margin-bottom: 15px;
+}
+#liczba2 {
+    margin-left: 68px;
+}
+#txt {
+    height: 240px;
+    width: 400px;
+    margin-bottom: 15px;
+}
+.button {
+    width: 80px;
+    height: 40px;
+    margin-left: 330px;
+}

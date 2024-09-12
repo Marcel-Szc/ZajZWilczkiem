@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+
+    function silnia() {
+        console.clear;
+    var silny = parseInt(document.getElementById("siln").value);
+      let sum = 1;
+      for(let u = 1; u <= silny; u++) {
+        sum = sum * u;
+      }
+      console.log(sum);
+
+    }
+    function funkcjaliczb()  {
+
+    var liczba = parseInt(document.getElementById("liczba").value);
+
+    var dod = "Liczba jest dodatnia";
+    var zero = "Liczba jest zerem";
+    var ujem = "Liczba jest ujemna";
+
+    if ( liczba > 0) {
+        console.log(dod);
+    } else if (liczba == 0) {
+        console.log(zero);
+    } else if (liczba < 0) {
+        console.log(ujem);
+    }
+    silnia();
+}
+    function tablica() {
+        let tab = [1,4,8,7,4,9];
+        let suma = 0;
+        for (let i = 0; i<tab.length; i++) {
+            suma += tab[i];
+        }
+        console.log(suma);
+    }
+    tablica();
+    </script>
+    
+</head>
+<body>
+    <header></header>
+    <div class="main">
+        <div class="hero">
+            <input id="liczba" type="text">
+            <button onclick="funkcjaliczb()">Wyślij</button>
+
+            <input id="siln" type="text">
+            <button onclick="silnia()">wyślij 2</button>
+        </div>
+    </div>
+    <footer></footer>
+</body>
+</html>

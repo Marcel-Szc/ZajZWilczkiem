@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div class="main">
+    <div class="parzystosc">
+        <h2>Sprawdź czy liczba jest parzysta</h2>
+        <input type="text" placeholder="podaj liczbe" id="para">
+        <button onclick="para()">Wyślij</button>
+    </div>
+    <div class="prostokat">
+        <h2>Oblicz obwód prostokąta</h2>
+        <input type="text" placeholder="podaj Podastawe" id="podstawa">
+        <input type="text" placeholder="podaj Bok" id="bok">
+        <button onclick="prostokat()">Wyślij</button>
+    </div>
+</div>
+</body>
+<script>
+/*
+function para() {
+    liczba = parseInt(document.getElementById("para").value);
+    if (liczba % 2 == 0) {
+        console.log("liczba " + liczba +" jest parzysta");
+    } else {
+        console.log("liczba " + liczba +" nie jest parzysta");
+    }
+}
+
+function prostokat() {
+    podstawa = parseInt(document.getElementById("podstawa").value);
+    bok = parseInt(document.getElementById("bok").value);
+
+    wynik = (podstawa * 2) + (bok * 2);
+    
+    console.log(wynik);
+}
+
+function sumaDo100() {
+    let wynik = 0;
+    for (let i = 1; i <= 100; i++ ){
+        wynik += i;
+    }
+    console.log(wynik);
+}
+sumaDo100();
+
+function tablica1() {
+    const tablica = new Array;
+    for (let i = 1; i <= 20; i++) {
+        if(i % 2 == 0) {
+            for (let u = 0; u <= 10; u++) {
+                tablica[u] = i;
+                console.log(tablica[u]);
+            }
+        }
+    }
+}
+tablica1();
+
+function tablica2() {
+    const tablica = [2,6,7,5,19,56,54,38,17,29,54,78];
+    let naj = 0;
+    for(let i = 0; i <= tablica.length; i++) {
+        if (tablica[i] > naj) {
+            naj = tablica[i];
+        }
+    }
+    console.log(naj);
+}
+tablica2();
+
+/* function tablica3() {
+    let uczen = [
+        {imie: "Janek", oceny: [4,6,3,6,5,2]},
+    ];
+    let suma =  0;
+    for (const ocena of uczen.oceny) {
+        suma += ocena;
+    }
+    console.log(suma / uczen.oceny.length)
+}
+tablica3(); 
+
+function tablica4() {
+    const tablica = [1,5,6,5,7,5,3,2,5];
+
+    for (let i = 0; i <= tablica.length; i++) {
+        if (tablica[i] == 5){
+            delete tablica[i];
+        }
+        console.log(tablica[i]);
+    }
+}
+tablica4();
+
+function tablica5() {
+    let ksiazka =  [
+    {Autor: "Ktoś1", tytul: "tyuł1", rokwydania: 1945},
+    {Autor: "Ktoś2", tytul: "tyuł2", rokwydania: 1804},
+    {Autor: "Ktoś3", tytul: "tyuł3", rokwydania: 2005},
+    {Autor: "Ktoś4", tytul: "tyuł4", rokwydania: 1993},
+    {Autor: "Ktoś5", tytul: "tyuł5", rokwydania: 2006},
+    ];
+
+    ksiazka.forEach(ksiazka2 =>{
+        if(ksiazka2.rokwydania > 2000){
+            console.log(ksiazka2.tytul);
+        }
+    }
+    )
+}
+tablica5();
+*/
+
+</script>
+</html>

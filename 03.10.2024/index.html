@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSv4</title>
+</head>
+<body>
+    <h1>Siema</h1>
+    <div id="naglowek" style="height: 100px; width: 100px; background-color: red;">tekst</div>
+    <div class="item">1</div>
+    <div class="item">1</div>
+    <button id="event">Kliknij mnie</button>
+    <input type="text" id="JD" style="height:70px; width: 100px;">
+    <form id="forma">
+        <input type="submit">
+    </form>
+    <input type="text"id="klasa" style="height:70px; width: 100px;">
+</body>
+<script> 
+/*
+    //1
+    let now = document.createElement("div");
+    now.innerText = "nowy element";
+    document.body.appendChild(now);
+    //2
+    let nagl = document.getElementById("naglowek");
+    nagl.innerText = "Witaj na stronie!";
+    //3
+    let ite = document.getElementsByClassName("item");
+    for (let i = 0; i <= ite.length; i++ ) {
+        ite[i].style.color = "blue";
+    } 
+    //4
+    let akcja = document.getElementById("event");
+    akcja.addEventListener("click", function(){
+        akcja.style.backgroundColor = "red";
+    }); 
+    //5
+    let pole = document.getElementById("JD");
+    pole.addEventListener("input", function()
+    {
+        console.log(pole.value);
+    }); 
+    //6
+    let form = document.getElementById("forma");
+    form.addEventListener("submit", function(event){
+        console.log("Formluarz przesałany");
+        event.preventDefault();
+    });
+    //7
+     let pozycja = document.body;
+     pozycja.addEventListener("click", function(event) {
+        console.log(event.clientX, event.clientY);
+    }); 
+    //8
+    let pozycja1 = document.getElementById("naglowek");
+    pozycja1.addEventListener("click", funkcja);
+    let iloscKlik = 0;
+    function funkcja() {
+        if (iloscKlik == 3) {
+            pozycja1.removeEventListener("click", funkcja);
+            console.log("Zdarzenie usuniete")
+        }
+        else {
+            iloscKlik += 1;
+        }
+    } 
+    // 9
+    let pozycja2 = document.body;
+    let position = document.querySelector("h1");
+    pozycja2.addEventListener("click", function(){
+        position.innerText = "Kliknięto na stronie";
+    });
+    //10
+    let klasa = document.getElementById("klasa");
+    klasa.addEventListener("input", function(){
+        if (klasa.value.length == 10) {
+            klasa.style.color = "green";
+        }
+    }); */
+</script>
+</html>

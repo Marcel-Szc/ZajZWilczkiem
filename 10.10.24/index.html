@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularze</title>
+</head>
+<body>
+    <button id="but">Kliknij</button>
+    <input type="text" placeholder="" id="domysl">
+    <form id="forma1">
+        <input type="text" placeholder="Imie" id="imie">
+        <input type="submit">
+    </form>
+    <form id="forma2">
+        <input type="text" placeholder="haslo" id="haslo">
+        <input type="submit">
+    </form>
+    <form id="forma3">
+        <input type="text" placeholder="wiek" id="wiek">
+        <input type="submit">
+    </form>
+    <form id="forma4">
+        <input type="text" placeholder="haslo2" id="haslo2">
+        <input type="text" placeholder="potwierdź hasło" id="potwierdz">
+        <input type="submit">
+    </form>
+    <form id="forma5">
+        <input type="text" placeholder="example@gmail.com" id="email">
+        <input type="submit">
+    </form>
+    <form id="forma6">
+        <input type="text" placeholder="Imie" id="imie2">
+        <input type="text" placeholder="nazwisko" id="nazwisko2">
+        <input type="text" placeholder="example@gmail.com" id="email2">
+        <input type="submit">
+    </form>
+    <script>
+        //zad1 
+        /*
+        przycisk = document;
+        przycisk.addEventListener("click", function(event) {
+            console.log(event.clientX, event.clientY);
+        }); 
+        //zad 2
+        let but = document.getElementById("but");
+        but.addEventListener("mouseover", function(){
+            but.style.backgroundColor = "blue";
+        });
+        but.addEventListener("mouseout", function(){
+            but.style.backgroundColor = "red";
+        }); 
+        // zad 3
+        let domyslny = document.getElementById("domysl");
+        domyslny.addEventListener("dblclick", function() {
+            alert("Wartość domyślna");
+         }); 
+         //zad4 
+         let formularz = document.getElementById("forma1");
+         let imie = document.getElementById("imie");
+         formularz.addEventListener("submit", function(){
+            if(imie.value === "") {
+                alert("musisz wpisać wartość");
+            }
+         }); 
+         //zad5
+         let formularz = document.getElementById("forma2");
+         let haslo = document.getElementById("haslo").value;
+         formularz.addEventListener("submit", function(event){
+            event.preventDefault();
+            if(haslo.length < 8 || /\d/.test(haslo)) {
+                
+                alert("musisz wpisać hasło zwierające conajmnije 8 znaków i jedną liczbe ");
+            } 
+         });
+         //zad6
+         let formawiek = document.getElementById("forma3");
+         let wiek = document.getElementById("wiek");
+         formawiek.addEventListener("submit", function(event){
+            event.preventDefault();
+            if(wiek.value !== "" || wiek.value >= 18 || wiek.value <=100){
+                alert("podaj wiek w przedziale od 18 do 100");
+            }
+            }); 
+        
+        //zad7
+        let potwierdzHas = document.getElementById("forma4");
+        let haslo2 = document.getElementById("haslo2").value;
+        let potHas = document.getElementById("potwierdz").value;
+        potwierdzHas.addEventListener("submit", function(event) {
+            if(haslo != potHas) {
+                event.preventDefault();
+                alert("Hasła się nie zgadzają");
+            }
+        }); 
+        //zad8
+        let forma4 = document.getElementById("forma4");
+        let email = document.getElementById("email").value;
+        forma4.addEventListener("submit", function(event){
+            if(!email.includes('@') || !email.includes('.')) {
+                event.preventDefault();
+                alert("błąd");
+            };
+        });*/
+        //zad9
+        let forma6 = document.getElementById("forma6");
+        let email = document.getElementById("email2").value;
+        let imie = document.getElementById("imie");
+    </script>
+</body>
+</html>

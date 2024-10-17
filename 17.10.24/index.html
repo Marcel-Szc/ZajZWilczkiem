@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz</title>
+    <style>
+        ul{
+            list-style: none;
+            width: 300px;
+        }
+    </style>
+</head>
+<body onload="baza()">
+    <div class="main">
+        <form id="formularz">
+            <input type="text" placeholder="Imie" id="imie">
+            <input type="text" placeholder="Nazwisko" id="nazwisko">
+            <input type="date" placeholder="Rok urodzenia" id="dataUr">
+            <input type="email" placeholder="Email" id="mail">
+            <input type="text" placeholder="numer telefonu" id="numer">
+            <input type="password" placeholder="Hasło" id="haslo">
+            <input type="password" placeholder="Powtórz Hasło" id="haslo2">
+            <input type="submit" placeholder="Rejestruj">
+        </form>
+        <section id="podsumowanie">
+           <ul id="wyswietl">
+            
+           </ul>
+           <button onclick="baza()">powrót</button>
+        </section>
+    </div>
+    <script>
+        let podsumowanie = document.getElementById("podsumowanie");
+        let formularz = document.getElementById("formularz");
+        let imie = document.getElementById("imie");
+        let nazwisko = document.getElementById("nazwisko");
+        let dataUr = document.getElementById("dataUr");
+        let mail = document.getElementById("mail");
+        let numer = document.getElementById("numer");
+        let haslo = document.getElementById("haslo");
+        let haslo2 = document.getElementById("haslo2");
+
+        function baza() {
+            podsumowanie.style.display="none";
+            formularz.style.display="flex";
+        }
+        
+        function consol(){
+            for(let u = 1; u <= iloscForm; u++) {
+            console.log(u, ". ", imie.value, nazwisko.value, " - Email: ", mail.value, ", Data Urodzenia: ", dataUr.value, ", Telefon: ", numer.value); }
+        }
+        function zarej(){
+            formularz.style.display="none";
+            podsumowanie.style.display="flex";
+
+
+            imieFun();
+            nazwFun();
+            uroFun();
+            mailFun();
+        }
+
+        function imieFun(){
+                let appendo = document.createElement("li");
+                let lista = document.getElementById("wyswietl");
+                appendo.innerText = imie.value;
+                lista.appendChild(appendo);
+            }
+
+            function nazwFun(){
+                let appendo = document.createElement("li");
+                let lista = document.getElementById("wyswietl");
+                appendo.innerText = nazwisko.value;
+                lista.appendChild(appendo);
+            }
+
+            function uroFun(){
+                let appendo = document.createElement("li");
+                let lista = document.getElementById("wyswietl");
+                appendo.innerText = dataUr.value;
+                lista.appendChild(appendo);
+            }
+            
+            function mailFun(){
+                let appendo = document.createElement("li");
+                let lista = document.getElementById("wyswietl");
+                appendo.innerText = mail.value;
+                lista.appendChild(appendo);
+            }
+        /* 
+        
+        if(){
+                event.preventDefault();
+                .style.borderColor = "red";
+            } else {
+                .style.borderColor = "green";
+                poprawne += 1;
+            }
+
+        */
+        let iloscForm = 0;
+        formularz.addEventListener("submit", event => {
+            event.preventDefault();
+            let poprawne = 0;
+            let poprawneImie = 0;
+            let poprawneNazw = 0;
+            let poprawneMail = 0;
+            let poprawneNumer = 0;
+            let poprawneHas1 = 0;
+            let poprawneHas2 = 0;
+            if(imie.value === ""){
+                imie.style.borderColor = "red";
+            } else {
+                imie.style.borderColor = "green";
+                poprawneImie = 1;
+            }
+            if(nazwisko.value === ""){
+                nazwisko.style.borderColor = "red";
+            } else {
+                nazwisko.style.borderColor = "green";
+                poprawneNazw = 1;
+            }
+            mail.style.borderColor = "green";
+            if(mail.value.includes('@') || email.value.includes('.')){
+                mail.style.borderColor = "green";
+                poprawneMail = 1;
+            } else {
+                mail.style.borderColor = "red";
+            }
+            if(numer.value.length != 9){
+                numer.style.borderColor = "red";
+            } else {
+                numer.style.borderColor = "green";
+                poprawneNumer = 1;
+            }
+            if(haslo.value < 8 || /\d/.test(haslo.value) ){
+                haslo.style.borderColor = "green";
+                poprawneHas1= 1;
+            } else {
+                haslo.style.borderColor = "red";
+            }
+            if(haslo2.value === haslo.value){
+                haslo2.style.borderColor = "green";
+                poprawneHas2 = 1;
+            } else {
+                haslo2.style.borderColor = "red";
+            }
+            if( poprawneImie == 1 || poprawneNazw == 1 || poprawneMail == 1 || poprawneNumer == 1 || poprawneHas1 == 1 || poprawneHas2 == 1){
+                consol();
+                zarej();
+                iloscForm += 1;
+            } else{
+                alert("Ej ziutek bo coś się zepsuło");
+            }       
+        }); 
+    </script>
+</body>
+</html>

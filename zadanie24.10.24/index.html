@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz</title>
+    <style>
+        html, body{
+            margin: 0;
+            padding:0;
+            height: 89.59vh;
+            width: 100vw;
+        }
+        ul{
+            list-style: none;
+            width: 300px;
+        }
+        #formularz {
+            flex-direction: column;
+            height: 80%;
+            width: 80%;
+            justify-content: space-around;
+            margin: auto;
+            margin-top: 35px;
+        }
+        .main {
+            height: 100%;
+            width: 100%;
+            background-color: rgb(15, 15, 16);
+        }
+        #hero, #podsumowanie {
+            margin:auto;
+            padding-top: 100px;
+            border: 2px solid rgb(180, 180, 181);;
+            border-radius: 50px;
+            height: 500px;
+            width: 800px;
+            justify-content: center;
+            background-color: rgb(23, 23, 24);;
+        }
+        #imie, #nazwisko, #dataUr, #mail, #numer, #haslo, #haslo2{
+            border: 0px solid;
+            background-color: rgb(49, 49, 51);
+            width: 160px;
+            height: 25px;
+            border-radius: 20px;
+            margin: auto;
+            color: rgb(180, 180, 181);
+            text-align: center;
+        }
+        ::placeholder {
+            color: rgb(180, 180, 181);
+            text-align: center;
+        }
+        #przycisk {
+            background-color: rgb(255, 90, 0); /* allegro orange*/
+            color: rgb(218, 216, 210);
+            width: 200px;
+            height: 30px;
+            border-radius: 20px;
+            border: 0px solid;
+            margin: auto;
+        }
+        #przycisk:hover {
+            background-color: rgb(220, 76, 0);
+        }
+        #przycisk:active {
+            background-color: rgb(190, 58, 0);
+            margin-top: 16px;
+            width: 190px;
+            height: 25px;
+        }
+        header{
+            padding-bottom: 100px;
+            background-color: rgb(15, 15, 16);
+        }
+        h1 {
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color:rgb(180, 180, 181);
+            margin: auto;
+        }
+        #hero h1 {
+            margin-left: 269px;
+        }
+        .podsumowanieWrapper h1 {
+            margin-left: 200px;
+        }
+        .podsumowanieWrapper #przycisk {
+            margin-left: 195px;
+            font-size: 12px;
+        }
+        #wyswietl {
+            display: flex;
+            flex-direction: column;
+            overflow-y: scroll;
+            color:rgb(180, 180, 181);
+            margin-right: 20px;
+            width: 100%;
+            max-height: 99%;
+            -ms-overflow-style: none;  
+            scrollbar-width: none;
+        }
+        #wyswietl::-webkit-scrollbar {
+            display: none;
+        }
+        .wyswietlWrapping {
+            height: 300px;
+            width: 600px;
+        }
+    </style>
+</head>
+<body onload="baza()">
+    <header></header>
+    <div class="main">
+        <div id="hero">
+            <h1>Formularz rejestacji</h1>
+            <form id="formularz">
+                <input type="text" placeholder="Imie" id="imie">
+                <input type="text" placeholder="Nazwisko" id="nazwisko">
+                <input type="date" placeholder="Rok urodzenia" id="dataUr">
+                <input type="email" placeholder="Email" id="mail">
+                <input type="text" placeholder="numer telefonu" id="numer">
+                <input type="password" placeholder="Hasło" id="haslo">
+                <input type="password" placeholder="Powtórz Hasło" id="haslo2">
+                <input type="submit" placeholder="Rejestruj" id="przycisk">
+            </form>
+        </div>
+        <section id="podsumowanie">
+            <div class="podsumowanieWrapper">
+            <h1>Historia formularzy</h1>
+            <div class="wyswietlWrapping">
+                <ul id="wyswietl">
+                </ul>
+            </div>
+            <button id="przycisk" onclick="powrot()">Powrót do formularza rejestracji</button>
+            </div>
+        </section>
+    </div>
+    <script>
+        
+        let podsumowanie = document.getElementById("podsumowanie");
+        let formularz = document.getElementById("formularz");
+        let hero = document.getElementById("hero");
+        let imie = document.getElementById("imie");
+        let nazwisko = document.getElementById("nazwisko");
+        let dataUr = document.getElementById("dataUr");
+        let mail = document.getElementById("mail");
+        let numer = document.getElementById("numer");
+        let haslo = document.getElementById("haslo");
+        let haslo2 = document.getElementById("haslo2");
+
+        function powrot() {
+            podsumowanie.style.display="none";
+            hero.style.display="block";
+            imie.value = "";
+            nazwisko.value = "";
+            dataUr.value = "";
+            mail.value = "";
+            numer.value = "";
+            haslo.value = "";
+            haslo2.value = "";
+        }
+        function baza() {
+            podsumowanie.style.display="none";
+            formularz.style.display="flex";
+        }
+        function zarej(){
+            hero.style.display="none";
+            podsumowanie.style.display="flex";
+            let appendo = document.createElement("li");    
+            let lista = document.getElementById("wyswietl");
+            appendo.innerText = iloscForm + ". " + imie.value + ", " + nazwisko.value + ", " + mail.value + ", " + numer.value + ", " + dataUr.value + ".";
+            appendo.setAttribute("id", "historia");
+            lista.appendChild(appendo);
+        }
+        let iloscForm = 0;
+        formularz.addEventListener("submit", event => {
+            event.preventDefault();
+            let poprawne = 0;
+            let poprawneImie = 0;
+            let poprawneNazw = 0;
+            let poprawneMail = 0;
+            let poprawneNumer = 0;
+            let poprawneHas1 = 0;
+            let poprawneHas2 = 0;
+            if(imie.value === ""){
+                imie.style.borderColor = "red";
+            } else {
+                imie.style.borderColor = "green";
+                poprawneImie = 1;
+            }
+            if(nazwisko.value === ""){
+                nazwisko.style.borderColor = "red";
+            } else {
+                nazwisko.style.borderColor = "green";
+                poprawneNazw = 1;
+            }
+            mail.style.borderColor = "green";
+            if(mail.value.includes('@') || email.value.includes('.')){
+                mail.style.borderColor = "green";
+                poprawneMail = 1;
+            } else {
+                mail.style.borderColor = "red";
+            }
+            if(numer.value.length != 9){
+                numer.style.borderColor = "red";
+            } else {
+                numer.style.borderColor = "green";
+                poprawneNumer = 1;
+            }
+            if(haslo.value < 8 || /\d/.test(haslo.value) ){
+                haslo.style.borderColor = "green";
+                poprawneHas1= 1;
+            } else {
+                haslo.style.borderColor = "red";
+            }
+            if(haslo2.value === haslo.value){
+                haslo2.style.borderColor = "green";
+                poprawneHas2 = 1;
+            } else {
+                haslo2.style.borderColor = "red";
+            }
+            if( poprawneImie == 1 || poprawneNazw == 1 || poprawneMail == 1 || poprawneNumer == 1 || poprawneHas1 == 1 || poprawneHas2 == 1){
+                iloscForm += 1;
+                zarej();
+            } else{
+                alert("Ej ziutek bo coś się zepsuło");
+            }       
+        }); 
+    </script>
+</body>
+</html>

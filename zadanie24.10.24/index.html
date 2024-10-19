@@ -40,7 +40,7 @@
             background-color: rgb(23, 23, 24);;
         }
         #imie, #nazwisko, #dataUr, #mail, #numer, #haslo, #haslo2{
-            border: 0px solid;
+            border: 2px solid rgb(49, 49, 51);
             background-color: rgb(49, 49, 51);
             width: 160px;
             height: 25px;
@@ -209,7 +209,7 @@
                 numer.style.borderColor = "green";
                 poprawneNumer = 1;
             }
-            if(haslo.value < 8 || /\d/.test(haslo.value) ){
+            if(haslo.value >= 8 || /\d/.test(haslo.value) ){
                 haslo.style.borderColor = "green";
                 poprawneHas1= 1;
             } else {

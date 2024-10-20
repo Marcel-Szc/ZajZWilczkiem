@@ -170,7 +170,7 @@
             podsumowanie.style.display="flex";
             let appendo = document.createElement("li");    
             let lista = document.getElementById("wyswietl");
-            appendo.innerText = iloscForm + ". " + imie.value + ", " + nazwisko.value + ", " + mail.value + ", " + numer.value + ", " + dataUr.value + ".";
+            appendo.innerText = iloscForm + ". " + imie.value + nazwisko.value + " - Email: " + mail.value + ", Data urodzenia: " + dataUr.value + ", Telefon: "+ numer.value;
             appendo.setAttribute("id", "historia");
             lista.appendChild(appendo);
         }

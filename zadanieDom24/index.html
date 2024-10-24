@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+    body,html {
+      font-family: Plus Jakarta Sans;
+      font-weight: 500;
+      width: 97vw;
+      height: 89vh;
+      background-color: hsl(202, 86%, 94%);
+    }
+    .main {
+      display: flex;
+      flex-direction: row;
+      margin: auto;
+      border-radius: 18px;
+      width: 600px;
+      height: 300px;
+      margin-top: 50px;
+      background-color: hsl(0, 0%, 100%);
+    }
+    .right {
+      width: 50%;
+      height: 100%;
+      background-color: hsl(202, 55%, 16%);
+      border-radius: 18px;
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 40px;
+    }
+    .left {
+      width: 50%;
+      height: 100%;
+    }
+    .info {
+      display:flex;
+    }
+    .clear {
+      background-color: white;
+      border: none;
+      text-decoration: underline;
+    }
+    .inputTop {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+<div class="main">
+  <div class="left">
+    <div class="info">
+      <h2>Mortgage Calculator</h2> <button onclick="" class="clear">Clear All</button>
+    </div>
+   <form id="form">
+    <div class="topForm">
+      <div class="opisForm">Mortgage Amount</div>
+      <div class="inputTop">
+        <div class="currency">£</div> <input type="text"placeholder="0.0" id="amount">
+      </div>
+    </div>
+    <div class="midForm">
+      <div class="midFormLeft">
+        <div class="opisForm">Mortgage Term</div>
+      <div class="inputTop">
+        <input type="text"placeholder="0.0" id="term"><div class="currency">Years</div> 
+      </div>
+      </div>
+      <div class="midFormRight">
+        <div class="opisForm">Interest Rate</div>
+      <div class="inputTop">
+        <input type="text" placeholder="0.0" id="procent"><div class="currency">%</div> 
+      </div>
+      </div>
+    </div>
+    <div class="select">
+      <div class="opisForm"> Mortgage Type</div>
+      <input type="radio" id="option1">
+      <label for="option1">Repayment</label>
+      <input type="radio" id="option2">
+      <label for="option1">Interest Only</label>
+    </div>
+    <input type="submit" placeholder="Calculate Repayments">
+   </form>
+  </div>
+  <div class="right">
+    <h2>Your results</h2>
+
+    <div class="desc">Your results are shown below based on the information you provided. 
+      To adjust the results, edit the form and click “calculate repayments” again.</div>
+  
+    <div class="opisWynik1">Your monthly repayments</div>
+    <div id="wynik1"></div>
+    <div class="opiswynik2">Total you'll repay over the term</div>
+    <div id="wynik2"></div>
+  </div>
+</div>
+ <!-- 
+£
+ Empty results start 
+
+  Results shown here
+
+  Complete the form and click “calculate repayments” to see what 
+  your monthly repayments would be.
+
+   Empty results end 
+
+  Completed results start 
+
+  Your results
+
+  Your results are shown below based on the information you provided. 
+  To adjust the results, edit the form and click “calculate repayments” again.
+
+  Your monthly repayments
+
+  Total you'll repay over the term
+
+  Completed results end 
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>-->
+  <script>
+let formularz = document.getElementById("form");
+    formularz.addEventListener("submit", event => {
+      event.preventDefault();
+      let ilosc = document.getElementById("amount").value;
+    let czas = document.getElementById("term").value;
+    let procent = document.getElementById("procent").value;
+    let opcja1 = document.getElementById("option1").value;
+    let opcja2 = document.getElementById("option2").value
+
+      let miesieczna = procent / (12 * 100) ;
+
+      let n = czas * 12;
+
+      let monthlyAmount = ilosc * (miesieczna * ((miesieczna * Math.pow(1 + miesieczna, n)) / (Math.pow(1+miesieczna, n) - 1)) );
+
+      document.getElementById("wynik1").innerText = monthlyAmount.toFixed(2);
+
+    });
+  </script>
+</body>
+</html>

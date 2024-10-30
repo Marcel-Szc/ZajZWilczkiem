@@ -8,11 +8,11 @@
   <title>Frontend Mentor | Mortgage repayment calculator</title>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
-*, *:before, *:after {
+* {
   box-sizing: border-box;
 }
 i
-html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, .icons, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+html, body {
   margin: 0;
   padding: 0;
   border: 0;
@@ -38,7 +38,7 @@ body {
   font-weight: 500;
   font-style: normal;
 }
-.container .submit_form .submit, .container .submit_form .amount_error, .container .submit_form .terms_error, .container .submit_form .rates_error, .container .submit_form .mortgage_types .radiobox_error, .container .submit_form .mortgage_types .repay_radio label, .container .submit_form .mortgage_types .interest_radio label, .container .submit_form .term_and_rate .icons, .container .header h1, .container #right_half_hidden .generated #generated_total, .container #right_half_hidden .generated #generated_month, .container #right_half_hidden h2 {
+.container {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -325,7 +325,7 @@ body {
                 <section class="mortgage_amount">
                     <label for="amount">Mortgage Amount</label>
                     <input type="text" name="amount" id="amount" class="inputs">
-                    <div class="icons" id="icon_Amount">$</div>
+                    <div class="icons" id="icon_Amount">£</div>
                     <p class="amount_error" id="error_Amount">This field is required</p>
                 </section>
                 
@@ -406,20 +406,16 @@ body {
 
 
     repayment.addEventListener('click', function() {
-      if (repay_div.style.backgroundColor == 'rgba(0, 0, 0, 0)' || interest_div.style.backgroundColor == 'rgba(0, 0, 0, 0)') {
-          repay_div.style.backgroundColor = 'hsla(61, 70%, 52%, .3)';
-          repay_div.style.border = '2px solid hsl(61, 70%, 52%)';
-          interest_div.style.backgroundColor = 'hsl(0, 0%, 100%)';
-          interest_div.style.border = '1px solid hsl(200, 26%, 54%)';
-      }    
+     if (interest.checked) {
+      interest.unchecked;
+     }
+     repayment.checked;
     });
     interest.addEventListener('click', function() {
-      if (interest_div.style.backgroundColor == 'rgba(0, 0, 0, 0)' || repay_div.style.backgroundColor == 'rgba(0, 0, 0, 0)') {
-          interest_div.style.backgroundColor = 'hsla(61, 70%, 52%, .3)';
-          interest_div.style.border = '2px solid hsl(61, 70%, 52%)';
-          repay_div.style.backgroundColor = 'hsl(0, 0%, 100%)';
-          repay_div.style.border = '1px solid hsl(200, 26%, 54%)';
-     } 
+      if (repayment.checked) {
+        repayment.checked;
+      }
+      interest.checked;
     });
     function clear() {
       interest_div.style.backgroundColor = 'hsl(0, 0%, 100%)';
@@ -429,10 +425,10 @@ body {
       amount.value = "";
       term.value = "";
       rate.value = "";
-      if(repayment.checked = true){
-        repayment.checked = false;
-      } else if(interest.checked = true) {
-        interest.checked = false;
+      if (repayment.checked) {
+        repayment.checked;
+      }  else  if (interest.checked) {
+        interest.unchecked;
       }
 
     }
@@ -493,7 +489,7 @@ form.addEventListener('submit', (event) => {
     if (!interest.checked && !repayment.checked) {
       radioboxError.style.display = 'block';
       radioboxError.style.position = 'absolute';
-      radioboxError.style.marginTop = 104 + 'px';
+      radioboxError.style.marginTop = 124 + 'px';
       radioboxError.style.marginLeft = 1 + 'px';
     } else {
       correctIR = 1;

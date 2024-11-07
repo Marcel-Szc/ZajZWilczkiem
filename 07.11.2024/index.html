@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!-- <div id="tytul"></div> 
+   <div class="naglowek"></div>
+   <p></p>
+   <div></div> 
+   <ul id="lista">
+    <li></li>
+   </ul>
+</body>
+<div></div>
+<p></p>
+<button>clickMe</button>
+<p>JD</p>
+<button onclick="one()">1</button>
+<button onclick="two()">2</button>
+<button onclick="three()">3</button>
+<form id="form">
+    <input type="text" placeholder="siema" id="siema">
+    <input type="submit">
+</form>
+<form id="form">
+    <input type="email" placeholder="email" id="email">
+    <input type="submit" placeholder="prześlij">
+</form> -->
+<form id="form">
+    <input type="date" placeholder="wiek">
+    <input type="submit" placeholder="przeslij">
+</form>
+<!--
+    console.log("1-------------------------------")
+    //1-------------------------------
+    console.log("witaj na stronie");
+    console.log("2,3-------------------------------")
+    //2,3-------------------------------
+    var imie = "Dexter"; // tworzy zmienną imie i przypisuje jej wartość "Dexter"
+    var nazwisko = "Morgan"; // tworzy zmienną nazwisko i przypisuje jej wartość "Morgan"
+    console.log("Imie: ", imie, ", Nazwisko: ", nazwisko); //wyświetla w konsoli Imie i Nazwisko
+    console.log("4------------------------------");
+    //4-------------------------------
+    var liczba = 10;
+    liczba += 2;
+    console.log(liczba);
+    liczba -= 2;
+    console.log(liczba);
+    liczba /= 2; 
+    console.log(liczba);
+    liczba *= 2; 
+    console.log(liczba);
+    console.log("5-------------------------------");
+    //5-------------------------------
+    var x = 5;
+    var y = "5";
+    console.log(x === y);
+    console.log(x == y);
+    // == porównóje zmieniając operandy na ten sam typ, a === sprawda czy operandy mają ten sam typ
+    console.logconsole.log("6-------------------------------");
+    //6 
+    var a = true;
+    var b = false;
+    if (a != b){
+        console.log(true);
+    }
+    if (a == true || b == true) {
+        console.log(true);
+    }
+       console.log("7-------------------------------");
+    //7
+    var wiek = 17;
+    if(wiek < 13){
+        console.log("dziecko");
+    } else if(wiek >= 13 && wiek <=18) {
+        console.log("Nastolatek")
+    } else if(wiek > 18){
+        console.log("Dorosły");
+    }
+     console.log("8-----------------------------");
+    //8
+    let owoce = ["Jabłko","Gruszka","banan"];
+    owoce.push("Truskawka");
+    console.log(owoce);
+    console.log("9----------------------------");
+   const tablica = [3,5,7];
+   const double = tablica.map((el)=>
+    el * 2
+   );
+   console.log(double);
+   const filtr = tablica.filter((el)=> el > 5);
+   console.log(filtr);
+   const suma = tablica.reduce((el, el2)=> el + el2);
+   console.log(suma);
+   console.log("10---------------");
+   const samochod = {
+    marka: "",
+    model: "",
+    rok: ""
+   };
+   const opis = {
+    marka: "Toyota",
+    model: "Corolla",
+    rok: 2020
+   }
+   Object.assign(samochod, opis);
+   console.log(samochod);
+     //10
+   let tytul = document.getElementById("tytul");
+   tytul.innerText = "Witaj na stronie";
+       //12
+  let nagl = document.getElementById("naglowek");
+  let p = document.querySelector("p");
+  let div = document.querySelectorAll("div");
+  //13
+   let lista = document.getElementById("lista");
+
+    let nowy = document.createElement("li");
+
+    lista.appendChild(nowy);
+
+    nowy.remove();
+    //14
+    document.querySelector("div").innerHTML = "Cześć!";
+   document.querySelector("p").classList.add("styl");
+   //15
+   document.querySelector("button").addEventListener("click", ()=>{
+    console.log("kliknięto przycisk!");
+  });
+  //16
+    document.querySelector("p").addEventListener("mouseover", ()=> {
+    document.querySelector("p").style.color = "green";
+  })
+  //17
+      let liczba = 0;
+function one(){
+    liczba = 1;
+    wyswietlLiczbe();
+}
+function two(){
+    liczba = 2;
+    wyswietlLiczbe();
+}
+function three(){
+    liczba = 3;
+    wyswietlLiczbe();
+}
+function wyswietlLiczbe(){
+    console.log(liczba);
+}
+//18
+let form = document.getElementById("form");
+let siema = document.getElementById("siema");
+
+form.addEventListener("submit", (e)=>{
+    if(siema.value !== "siema"){
+        e.preventDefault();
+        console.log("błąd");
+    } else {
+        console.log("popr")
+    }
+});
+//19
+let form = document.getElementById("form");
+let email = document.getElementById("email");
+
+form.addEventListener("submit", (e)=>{
+   e.preventDefault();
+   console.log(email.value);
+});
+-->
+<script>
+let form = document.getElementById("form");
+let wiek = document.getElementById("wiek");
+
+form.addEventListener("submit", (e)=>{
+   e.preventDefault();
+   if
+});
+</script>
+</html>

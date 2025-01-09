@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biuro turystyczne</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Zwiedzamy Polskę</h1>
+    </header>
+    <section class="main">
+        <section class="lewy">
+            <button id="lewy">&lt;</button>
+        </section>
+        <section class="srodkowy">
+            <img src="1.jpg" id="srodkoweZdj" alt="Aktywne Zdjęcie">
+        </section>
+        <section class="prawy">
+            <button id="prawy">&gt;</button>
+        </section>
+    </section>
+    <section class="miniatury">
+        <img src="1.jpg" alt="Gdańsk">
+        <img src="2.jpg" alt="Kraków">
+        <img src="3.jpg" alt="Niedzica">
+        <img src="4.jpg" alt="Pieniny">
+        <img src="5.jpg" alt="Szklarska Poręba">
+        <img src="6.jpg" alt="Tatry">
+        <img src="7.jpg" alt="Wrocław">
+    </section>
+    <footer>
+        <h3>Autorem galerii jest: </h3>
+        <p>0000000000000000000000000</p>
+        <a href="http://pixabay.com">Więcej Zdjęć</a>
+    </footer>
+</body>
+<script>
+    let i = 1;
+    document.getElementById("lewy").addEventListener("click", function(){
+        i--;
+        if (i<1){
+            i = 7;
+        }
+        document.getElementById("srodkoweZdj").setAttribute("src", i+".jpg");
+    });
+    document.getElementById("prawy").addEventListener("click", function(){
+        i++;
+        if (i>7){
+            i = 1;
+        }
+        document.getElementById("srodkoweZdj").setAttribute("src", i+".jpg");
+    });
+</script>
+</html>

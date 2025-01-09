@@ -1,0 +1,70 @@
+*{
+    font-family: Georgia;
+    color: white;
+}
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header, footer {
+    background-color: maroon;
+    text-align: center;
+    padding: 2px;
+}
+.main {
+    display: flex;
+}
+.lewy, .srodkowy, .prawy {
+    background-color: lightsalmon;
+    height: 527px;
+}
+.lewy, .prawy{
+    width: 15%;
+    text-align: center;
+}
+.srodkowy{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+.miniatury {
+    background-color: maroon;
+    height: 70px;
+}
+button {
+    /* block */
+    background-color: LightSalmon;
+    color: maroon;
+    border:0;
+    font-size: 400%;
+    margin:auto;
+    padding-top: 210px;
+}
+@keyframes animacja {
+    from {padding-left: 50px;}
+    to {padding-left: 0px;}
+}
+.miniatury img {
+    height: 70px;
+    animation-name: animacja;
+    animation-duration: 4s;
+}
+.srodkowy img{
+    /* block */
+    margin: auto;
+    padding-top: 45px;
+}
+/* Gdy kursor znajduje się na obrazie z bloku środkowego wykonana jest animacja:
+− Stan początkowy animacji: skala 100%
+− Stan końcowy animacji: skala 120%
+− Styl obrazu: Skala 120%, czas trwania animacji 5 sekund
+*/
+@keyframes skala {
+    from {transform: scale(100%, 100%);}
+    to {transform: scale(120%, 120%);}
+}
+.srodkowy img:hover {
+    animation-name: skala;
+    animation-duration: 5s;
+}

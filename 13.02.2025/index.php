@@ -139,12 +139,14 @@
     /*
         function silnia($n){
             $wynik = 1;
-            for ($i = 1; $i <= $n; $i++){
+            $ile = $n;
+            for ($i = 1; $i <= $ile; $i++){
                 $wynik *= $n;
+                $n--;
             }
             return $wynik;
         }
-        echo silnia(2);
+        echo silnia(5);
     */
     // Zadanie 15
     /*

@@ -1,0 +1,8 @@
+Kwerenda 1:
+SELECT imie, pensja FROM `pracownicy` WHERE staz < 5;
+Kwerenda 2:
+
+Kwerenda 3:
+SELECT imie, nazwisko, pensja FROM pracownicy WHERE (SELECT MAX(pensja) FROM pracownicy) LIMIT 1;
+Kwerenda 4:
+UPDATE pracownicy SET staz = staz + 1;
